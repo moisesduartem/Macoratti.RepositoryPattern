@@ -6,7 +6,7 @@ namespace Macoratti.RepositoryPattern.Api.Repository
 {
     public class UnitOfWork : IUnitOfWork, IDisposable
     {
-        private AppDbContext _context;
+        private readonly AppDbContext _context;
         private Repository<Cliente> _clienteRepository;
 
         public UnitOfWork(AppDbContext context)
@@ -22,7 +22,7 @@ namespace Macoratti.RepositoryPattern.Api.Repository
         public IRepository<Cliente> ClienteRepository
         {
             get {
-                return _clienteRepository = _clienteRepository ?? new Repository<Cliente>(_context);
+                return _clienteRepository ??= new Repository<Cliente>(_context);
             }
         }
 

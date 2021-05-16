@@ -10,7 +10,7 @@ namespace BusinessLogic
 {
     public class ClienteRepository : IRepository<Cliente>, IClienteRepository
     {
-        AppDbContext _context;
+        private readonly AppDbContext _context;
 
         public ClienteRepository(AppDbContext context)
         {
