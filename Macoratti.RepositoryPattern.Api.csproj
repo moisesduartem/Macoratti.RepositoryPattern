@@ -6,8 +6,11 @@
 
   <ItemGroup>
     <Folder Include="Context\" />
-    <Folder Include="Domain\" />
     <Folder Include="Repository\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.15" />
   </ItemGroup>
 
 
