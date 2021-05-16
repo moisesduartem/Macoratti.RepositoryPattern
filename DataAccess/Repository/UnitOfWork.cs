@@ -14,6 +14,11 @@ namespace Macoratti.RepositoryPattern.Api.Repository
             _context = context;
         }
 
+        public UnitOfWork()
+        {
+            _context = new AppDbContext();
+        }
+
         public IRepository<Cliente> ClienteRepository
         {
             get {
