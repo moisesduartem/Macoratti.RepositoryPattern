@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace Macoratti.RepositoryPattern.Api.Repository
 {
-    interface IRepository<T> where T : class
+    public interface IRepository<T> where T : class
     {
         IEnumerable<T> Get();
         IEnumerable<T> Get(Expression<Func<T, bool>> predicate);
